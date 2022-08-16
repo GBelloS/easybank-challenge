@@ -1,5 +1,9 @@
 
-[//]: # (comment test)
+[//]: # (
+  multiline
+  comment
+  test
+)
 
 <!-- # Frontend Mentor - Easybank landing page solution -->
 
