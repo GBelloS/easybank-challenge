@@ -77,9 +77,10 @@ const proudOfThisFunc = () => {
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
  -->
-### Continued development
+<!-- ### Continued development -->
+### Next steps
 
-To be added.
+I will divide the HTML in containers and use flex/media queries to make it responsive.
 
 <!-- ### Useful resources
 
