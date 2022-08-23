@@ -40,8 +40,19 @@ async function getImages()
 function imgCreation(images)
 {
     const body = document.body
-    for(img of images)
-        body.appendChild(document.createElement('img')).src = img
+    for(link of images)
+    {
+        let figure = body.appendChild(document.createElement('figure'))
+        let img = figure.appendChild(document.createElement('img'))
+
+        img.src = link
+        img.alt="There's something wrong with this JSON string."
+
+        let filter = RegExp('\/[^/.]+\.')
+        let name = link.match(filter)[0].slice(1,-1)
+        
+        figure.appendChild(document.createElement('figcaption')).innerText = name
+    }
 }
 
 getImages()
