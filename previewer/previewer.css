@@ -11,7 +11,7 @@ body
     --angle: 45deg;/*will be modified in DIAGONAL ANGLE section on previewer.js*/
     --diagonal: calc(1.4*max(100vw,100vh));
 }
-body{--angle:0.91rad;--diagonal:1174px}/*REMOVE LATER*/
+
 body::before,body::after
 {content: '';
     position: absolute;
