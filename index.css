@@ -1,0 +1,58 @@
+html:root
+{
+/* Primary Colors */
+    --Dark-Blue: #2d314d;
+    --Lime-Green: #31d35c;
+    --Bright-Cyan: #2bb7da;
+/* Neutral Colors */
+    --Grayish-Blue: #9698a6;
+    --Light-Grayish-Blue: #f3f4f6;
+    --Very-Light-Gray: #fafafa;
+    --White: #ffffff;
+
+    font: /*300*/400/*700*/ 18px 'Public Sans', sans-serif;
+}
+header
+{
+    background: var(--White);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+/* DELETE LATER */
+    width: 1440px;
+    /* transform: translateX(-1000px); */
+}
+header>img
+{
+    height: 20px;
+}
+header ul
+{
+    list-style: none;
+    padding: 15px 0;
+    
+    display: flex;
+}
+header li
+{
+    margin: 0 20px;
+}
+header a
+{
+    text-decoration: none;
+    color: var(--Grayish-Blue);
+}
+button.request
+{
+    /* color: ; */
+    background: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
+    color: var(--Very-Light-Gray);
+    font: 400 18px 'Public Sans', sans-serif;
+
+    height: 50px;
+    width: 200px;
+    
+    border: none;
+    border-radius: 25px;
+}
