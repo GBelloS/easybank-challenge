@@ -9,23 +9,26 @@ html:root
     --Light-Grayish-Blue: #f3f4f6;
     --Very-Light-Gray: #fafafa;
     --White: #ffffff;
+/* Other Variables */
+    --horizontal-margin: 165px;
 
     font: /*300*/400/*700*/ 18px 'Public Sans', sans-serif;
 }
+a{ text-decoration: none; }
+
+/* ------------HEADER------------ */
 header
 {
     background: var(--White);
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-/* DELETE LATER */
-    width: 1440px;
-    /* transform: translateX(-1000px); */
 }
 header>img
 {
     height: 20px;
+    margin-left: var(--horizontal-margin);
 }
 header ul
 {
@@ -36,23 +39,40 @@ header ul
 }
 header li
 {
-    margin: 0 20px;
+    font-size: 14px;
+    margin: 0 15px;
 }
-header a
-{
-    text-decoration: none;
-    color: var(--Grayish-Blue);
-}
+
+header a{ color: var(--Grayish-Blue); }
+
 button.request
 {
     /* color: ; */
     background: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
-    color: var(--Very-Light-Gray);
-    font: 400 18px 'Public Sans', sans-serif;
+    color: var(--White);
+    font-size: 14px;
 
-    height: 50px;
-    width: 200px;
+    --height: 44px;
+    height: var(--height);
+    width: 165px;
     
     border: none;
-    border-radius: 25px;
+    border-radius: calc(var(--height)/2);
+    margin-right: var(--horizontal-margin);
 }
+/* ------------MAIN-SECTION-1------------ *
+main>.container-1
+{
+    background: var(--Very-Light-Gray);
+    height: 400px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+main>.container-1>div
+{
+    min-width: 450px;/*alterar!!!*
+    margin-left: var(--horizontal-margin);
+}/**/
