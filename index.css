@@ -10,11 +10,15 @@ html:root
     --Very-Light-Gray: #fafafa;
     --White: #ffffff;
 /* Other Variables */
-    --horizontal-margin: 165px;
+    --horizontal-margin: 155px;
+    --p-margin: 30px;
 
     font: /*300*/400/*700*/ 18px 'Public Sans', sans-serif;
+    color: var(--Dark-Blue);
 }
 a{ text-decoration: none; }
+
+p{ color: var(--Grayish-Blue); }
 
 .unstyled-space{ display: none; }
 
@@ -34,7 +38,7 @@ header
 }
 header>img{ height: 20px }
 
-header ul
+ul
 {
     list-style: none;
     margin: 0;
@@ -105,21 +109,53 @@ main>.container-1>.text
 {
     max-width: 450px;
     min-width: 450px;
+
     margin: 0 40px 0 0;
 }
-h1
+h1,h2
 {
-    color: var(--Dark-Blue);
     font-size: 55px;
     font-weight: 400;
 
     margin: 0;
 }
-main>.container-1 p
+p
 {
-    color: var(--Grayish-Blue);
     line-height: 27px;
-    
-    margin: 30px 0;
+    margin:var(--p-margin) 0 0;
 }
+main button.request{ margin-top: var(--p-margin); }
+
+/* ------------MAIN-SECTION-2------------ */
+main>.container-2
+{
+    background-color: var(--Light-Grayish-Blue);
+    padding: 100px var(--horizontal-margin);
+}
+main>.container-2>div
+{
+    max-width: 650px;
+    min-width: 500px;
+}
+h2{ font-size: 40px; }
+
+main>.container-2>ul
+{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    margin-top: 25px;
+}
+main>.container-2>ul>li
+{
+    min-width: 265px;
+    max-width: 265px;
+   
+    margin-top: 50px;
+    margin-right: 20px;
+}
+main>.container-2>ul>li.last-item{ margin-right: 0; }
+
+main>.container-2>ul p{ font-size: 16px; }
+
 /* -------------------------------------- */
