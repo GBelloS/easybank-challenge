@@ -16,31 +16,38 @@ html:root
 }
 a{ text-decoration: none; }
 
+.unstyled-space{ display: none; }
+
 /* ------------HEADER------------ */
 header
 {
-    background: var(--White);
+    position: relative;
+        z-index: 1;
+    background-color: var(--White);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding: 0 var(--horizontal-margin);
+    overflow: hidden;
 }
-header>img
-{
-    height: 20px;
-    margin-left: var(--horizontal-margin);
-}
+header>img{ height: 20px }
+
 header ul
 {
     list-style: none;
-    padding: 15px 0;
-    
+    margin: 0;
+    padding: 0;
+
     display: flex;
 }
 header li
 {
     font-size: 14px;
+ 
     margin: 0 15px;
+    padding: 33px 0;
 }
 
 header a{ color: var(--Grayish-Blue); }
@@ -48,7 +55,7 @@ header a{ color: var(--Grayish-Blue); }
 button.request
 {
     /* color: ; */
-    background: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
+    background-image: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
     color: var(--White);
     font-size: 14px;
 
@@ -58,21 +65,61 @@ button.request
     
     border: none;
     border-radius: calc(var(--height)/2);
-    margin-right: var(--horizontal-margin);
 }
-/* ------------MAIN-SECTION-1------------ *
+/* ------------MAIN-SECTION-1------------ */
 main>.container-1
 {
-    background: var(--Very-Light-Gray);
-    height: 400px;
+    background-color: var(--Very-Light-Gray);
+    --container-height: 650px;
+    height: var(--container-height);
 
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    
+    padding-left: var(--horizontal-margin);
 }
-main>.container-1>div
+main>.container-1>.image
 {
-    min-width: 450px;/*alterar!!!*
-    margin-left: var(--horizontal-margin);
-}/**/
+    order: 1;
+    position: relative;
+    
+    --image-height: 975px;
+    --background-width: 1150px;
+    width: var(--background-width);
+    height: var(--image-height);
+    
+    background-image: url('previewer/images/bg-intro-desktop.svg');
+    background-position: left bottom calc((var(--image-height) - var(--container-height))/2);
+    background-size: var(--background-width);
+    background-repeat: no-repeat;
+    
+    overflow: hidden;
+}
+main>.container-1 img
+{
+    height: var(--image-height);
+    margin-left: 160px;
+}
+main>.container-1>.text
+{
+    max-width: 450px;
+    min-width: 450px;
+    margin: 0 40px 0 0;
+}
+h1
+{
+    color: var(--Dark-Blue);
+    font-size: 55px;
+    font-weight: 400;
+
+    margin: 0;
+}
+main>.container-1 p
+{
+    color: var(--Grayish-Blue);
+    line-height: 27px;
+    
+    margin: 30px 0;
+}
+/* -------------------------------------- */
