@@ -25,8 +25,6 @@ p{ color: var(--Grayish-Blue); }
 /* ------------HEADER------------ */
 header
 {
-    position: relative;
-        z-index: 1;
     background-color: var(--White);
 
     display: flex;
@@ -58,7 +56,6 @@ header a{ color: var(--Grayish-Blue); }
 
 button.request
 {
-    /* color: ; */
     background-image: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
     color: var(--White);
     font-size: 14px;
@@ -71,11 +68,11 @@ button.request
     border-radius: calc(var(--height)/2);
 }
 /* ------------MAIN-SECTION-1------------ */
+main{ overflow: hidden; }
+
 main>.container-1
 {
     background-color: var(--Very-Light-Gray);
-    --container-height: 650px;
-    height: var(--container-height);
 
     display: flex;
     justify-content: space-between;
@@ -87,30 +84,40 @@ main>.container-1>.image
 {
     order: 1;
     position: relative;
-    
-    --image-height: 975px;
-    --background-width: 1150px;
-    width: var(--background-width);
-    height: var(--image-height);
+
+    width: calc(1019px + var(--horizontal-margin));
+    align-self: stretch;
     
     background-image: url('previewer/images/bg-intro-desktop.svg');
-    background-position: left bottom calc((var(--image-height) - var(--container-height))/2);
-    background-size: var(--background-width);
+    background-position: left top -260px;
     background-repeat: no-repeat;
     
-    overflow: hidden;
+    margin-left: 20px;
+}
+main>.container-1>.image>div
+{
+    position: absolute;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
 }
 main>.container-1 img
 {
-    height: var(--image-height);
-    margin-left: 160px;
+    position: relative;
+        top: -120px;
+    width: 767px;
+    height: auto;
+    
+    margin-left: 175px;
+    margin-right: calc(var(--horizontal-margin) - 19px);
 }
 main>.container-1>.text
 {
     max-width: 450px;
     min-width: 450px;
 
-    margin: 0 40px 0 0;
+    margin: 169px 0;
 }
 h1,h2
 {
