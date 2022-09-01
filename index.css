@@ -10,8 +10,9 @@ html:root
     --Very-Light-Gray: #fafafa;
     --White: #ffffff;
 /* Other Variables */
-    --horizontal-margin: 155px;
+    --horizontal-margin: 11vw;
     --p-margin: 30px;
+    --item-margin: 20px;
 
     font: /*300*/400/*700*/ 18px 'Public Sans', sans-serif;
     color: var(--Dark-Blue);
@@ -114,12 +115,12 @@ main>.container-1 img
 }
 main>.container-1>.text
 {
-    max-width: 450px;
-    min-width: 450px;
+    width: 450px;
+    flex-shrink: 0;
 
     margin: 169px 0;
 }
-h1,h2
+h1,h2,h3
 {
     font-size: 55px;
     font-weight: 400;
@@ -129,40 +130,118 @@ h1,h2
 p
 {
     line-height: 27px;
-    margin:var(--p-margin) 0 0;
+    padding-top: var(--p-margin);
+    margin: 0;
 }
 main button.request{ margin-top: var(--p-margin); }
 
 /* ------------MAIN-SECTION-2------------ */
-main>.container-2
+main>.container-2,main>.container-3
 {
     background-color: var(--Light-Grayish-Blue);
     padding: 100px var(--horizontal-margin);
 }
 main>.container-2>div
 {
-    max-width: 650px;
     min-width: 500px;
+    max-width: 650px;
 }
 h2{ font-size: 40px; }
 
 main>.container-2>ul
 {
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     
-    margin-top: 25px;
+    margin: 25px calc(-1*var(--item-margin)/2) 0;
 }
 main>.container-2>ul>li
 {
-    min-width: 265px;
-    max-width: 265px;
+    width: 265px;
+    flex-shrink: 0;
    
-    margin-top: 50px;
-    margin-right: 20px;
+    margin: 50px calc(var(--item-margin)/2) 0;
 }
-main>.container-2>ul>li.last-item{ margin-right: 0; }
+main>.container-2 h3
+{
+    font-size: 24px;
+    margin-top: var(--p-margin);
+}
 
 main>.container-2>ul p{ font-size: 16px; }
+
+/* ------------MAIN-SECTION-3------------ */
+main>.container-3{ background-color: var(--Very-Light-Gray); }
+
+main>.container-3>div
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0 calc(-1*var(--item-margin)/2);
+}
+main>.container-3 article
+{
+    --article-width: 255px;
+    width: var(--article-width);
+    flex-shrink: 0;
+   
+    --border-radius: 6px;
+    margin: 50px calc(var(--item-margin)/2) 0;
+}
+main>.container-3 article>div.image
+{
+    --image-height: 200px;
+    height: var(--image-height);
+ 
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    overflow: hidden;
+}
+main>.container-3 img
+{
+    position: relative;
+        left: 50%;
+    transform: translateX(-50%);
+    
+    height: var(--image-height);
+}
+main>.container-3 article>div.text
+{
+    position: relative;
+        z-index: 0;
+    
+    --text-margin: 20px;
+    margin: 0 var(--text-margin);
+}
+
+main>.container-3 article>div.text::before
+{content: '';
+    position: absolute;
+        left: calc(-1*var(--text-margin));
+        z-index: -1;
+
+    width: var(--article-width);
+    height: calc(100% + var(--p-margin));
+
+    background-color: var(--White);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+main>.container-3 p.credit{ font-size: 11px; }
+
+main>.container-3 h3
+{
+    font-size: 17px;
+    margin-top: 5px;
+}
+main>.container-3 a{ color: var(--Dark-Blue); }
+
+main>.container-3 p.text
+{
+    font-size: 13px;
+    line-height: 19px;
+    
+    padding-top: 10px;
+}
 
 /* -------------------------------------- */
