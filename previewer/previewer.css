@@ -1,36 +1,43 @@
 body
 { 
+    position: relative;
+    
     --background: rgb(34, 34, 34); 
     background: var(--background);
-    overflow: hidden;
 
     --margin: 8px;
     margin: var(--margin);
-    position: relative;
+}
+
+div
+{
+    position: absolute;
+        z-index: -1;
+    width: calc(100% + 2*var(--margin));
+    height: max(100vh,calc(100% + 2*var(--margin)));
+
+    margin: calc(-1*var(--margin));
+    overflow: hidden;
 
     --angle: 45deg;/*will be modified in DIAGONAL ANGLE section on previewer.js*/
     --diagonal: calc(1.4*max(100vw,100vh));
 }
 
-body::before,body::after
+div::before,div::after
 {content: '';
     position: absolute;
-        left: calc(-1*var(--margin));
-        top: calc(-1*var(--margin));
-        z-index: -1;
     
     transform-origin: left;
     transform:
         translateY(-50%)
         rotate(var(--angle));
-    
     width: var(--diagonal);
     height: calc(.6*var(--diagonal));
     
     background: rgba(48, 167, 207, 0.039);
 }
 
-body::after
+div::after
 {
     height: calc(.15*var(--diagonal));
     background: var(--background);

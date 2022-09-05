@@ -12,11 +12,15 @@ function findCSS(name)
 
 function findRule(CSS, name)
 {
-    const rulesArray = Array.from(CSS.cssRules)
-    
-    return rulesArray.find(rule=>
-        rule.selectorText == name
-    )
+    if(CSS)
+    {
+        const rulesArray = Array.from(CSS.cssRules)
+        
+        return rulesArray.find(rule=>
+            rule.selectorText == name
+        )
+    }
+    else return undefined
 }
 
 // ---------------------------------------------------
@@ -37,43 +41,72 @@ async function getImages()
     return imagesNames
 }
 
-function imgCreation(images)
+let unloaded = 0
+
+async function imgCreation(images)
 {
+    unloaded = images.length
     const body = document.body
-    for(link of images)
-    {
-        let figure = body.appendChild(document.createElement('figure'))
-        let img = figure.appendChild(document.createElement('img'))
+    
+    return new Promise
+    (
+        function(fulfill)
+        {
+            for(link of images)
+            {
+                let figure = body.appendChild(document.createElement('figure'))
+                let img = figure.appendChild(document.createElement('img'))
 
-        img.src = link
-        img.alt="There's something wrong with this JSON string."
+                img.src = link
+                img.alt="There's something wrong with this JSON string."
+                img.addEventListener
+                ('load',
+                    function()
+                    {
+                        unloaded--
+                        if(!unloaded)
+                            fulfill(document.documentElement.getBoundingClientRect().height)
+                    }
+                )
 
-        let filter = RegExp('\/[^/.]+\.')
-        let name = link.match(filter)[0].slice(1,-1)
-        
-        figure.appendChild(document.createElement('figcaption')).innerText = name
-    }
+                let filter = RegExp('\/[^/.]+\.')
+                let name = link.match(filter)[0].slice(1,-1)
+                
+                figure.appendChild(document.createElement('figcaption')).innerText = name
+            }
+        }
+    )
 }
+
+// ---------------------------------------------------
+
+// -----------------DIAGONAL CHANGING-----------------
+
+function changeDiagonal(htmlHeight)
+{
+    const previewerCSS = findCSS('previewer.css')
+    let rule = findRule(previewerCSS, 'div')
+    
+    if(rule)
+        window.addEventListener
+        ('resize',
+            function()
+            {
+                let width = innerWidth
+                let height = Math.max(innerHeight, htmlHeight)
+            
+                const angle = Math.atan2(height,width)
+                const length = Math.hypot(width,height)
+                
+                rule.style.setProperty('--angle',angle+'rad')
+                rule.style.setProperty('--diagonal',length+'px')
+            }
+        )
+}
+
+// ---------------------------------------------------
 
 getImages()
     .then(imgCreation)
+    .then(changeDiagonal)
     .catch(reason=>console.log(reason))
-
-// ---------------------------------------------------
-
-// -------------------DIAGONAL ANGLE-------------------
-
-const DiagonalAngle = Math.atan2(innerHeight,innerWidth)
-const previewerCSS = findCSS('previewer.css')
-
-let rule = findRule(previewerCSS, 'body')
-rule.style.setProperty('--angle',DiagonalAngle+'rad')
-
-// ----------------------------------------------------
-
-// ------------------DIAGONAL LENGTH------------------
-
-const DiagonalLength = Math.hypot(innerHeight,innerWidth)
-rule.style.setProperty('--diagonal',DiagonalLength+'px')
-
-// ---------------------------------------------------
