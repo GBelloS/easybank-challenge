@@ -87,21 +87,23 @@ function changeDiagonal(htmlHeight)
     const previewerCSS = findCSS('previewer.css')
     let rule = findRule(previewerCSS, 'div')
     
+    function change()
+    {
+        let width = innerWidth
+        let height = Math.max(innerHeight, htmlHeight)
+    
+        const angle = Math.atan2(height,width)
+        const length = Math.hypot(width,height)
+        
+        rule.style.setProperty('--angle',angle+'rad')
+        rule.style.setProperty('--diagonal',length+'px')
+    }
+
     if(rule)
-        window.addEventListener
-        ('resize',
-            function()
-            {
-                let width = innerWidth
-                let height = Math.max(innerHeight, htmlHeight)
-            
-                const angle = Math.atan2(height,width)
-                const length = Math.hypot(width,height)
-                
-                rule.style.setProperty('--angle',angle+'rad')
-                rule.style.setProperty('--diagonal',length+'px')
-            }
-        )
+    {
+        change()
+        window.addEventListener('resize',change)
+    }
 }
 
 // ---------------------------------------------------
