@@ -42,7 +42,7 @@ header
     padding: 0 var(--horizontal-margin);
     overflow: hidden;
 }
-header>svg
+header svg
 {
     width: 139px;
     height: 20px;
@@ -265,6 +265,7 @@ main>.container-3 p.text
 /* ------------FOOTER------------ */
 footer
 {
+    position: relative;
     background-color: var(--Dark-Blue);
 
     display: grid;
@@ -318,8 +319,11 @@ footer>.container-2
     justify-content: space-between;
     align-items: flex-end;
 }
-small{ text-align: right; }
-
-small, small a{ color: var(--Grayish-Blue); }
+small
+{
+    text-align: right;
+    color: var(--Grayish-Blue);
+}
+small a{ color: var(--Light-Grayish-Blue); }
 
 /* ------------------------------ */

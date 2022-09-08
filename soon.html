@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- ICON -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./previewer/images/favicon-32x32.png">
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- STYLES -->
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="index.css">
+        
+        <style>
+            main{ grid-template-rows: 1fr auto; }
+            
+            main>.container-1
+            {
+                flex-direction: row-reverse;
+                align-items: flex-start;
+
+                padding-left: 0;
+                padding-right: var(--horizontal-margin);
+            }
+
+            main>.container-1>.image
+            {
+                background-position: right top -260px;
+                
+                margin-left: 0;
+                margin-right: 20px;
+            }
+            main>.container-1>.image>div{ flex-direction: row-reverse; }
+            
+            main>.container-1 img
+            {
+                margin-right: 175px;
+                margin-left: calc(var(--horizontal-margin) - 19px);
+            }
+            main>.container-1>.text{ width: 350px;text-align: right ; }
+        </style>
+
+        <title>Frontend Mentor | Easybank coming soon page</title>
+    </head>
+    <body style="background:#f3f4f6">
+        <!-- GRADIENT -->
+        <div style="height:0">
+          <svg xmlns="http://www.w3.org/2000/svg" height="0">
+            <defs>
+              <linearGradient id="gradient" x1="72.195%" x2="17.503%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#33D35E"/>
+                <stop offset="100%" stop-color="#2AB6D9"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <!-------------->
+        
+        <div class="grid">
+          <header id="home">
+            <a href="index.html#home"><svg xmlns="http://www.w3.org/2000/svg" width="348" height="50" transform="scale(2.5) translate(104.25,15)">
+              <use href="previewer/images/logo.svg#image" fill-rule="evenodd" fill="url(#gradient)">
+                Logo image
+              </use>
+              <use href="previewer/images/logo.svg#text" fill="#2D314D">
+                Logo text
+              </use>
+              
+              <!-- alt -->
+                Logo
+            </svg></a>
+            <nav>
+              <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </nav>
+            <button type="button" class="request">Request Invite</button>
+          </header>
+          
+          <main>
+            <section class="container-1">
+              <br class="unstyled-space">
+              <div class="image">
+                <div>
+                  <span></span>
+                  <img src="previewer/images/image-mockups.png" height="250" alt="Cell phones showing the app">
+                </div>
+              </div>
+    
+              <div class="text">
+                <h1>Coming soon</h1>
+                <p>Wait just a little more...</p>
+                
+                <button type="button" class="request">Request Invite</button>
+              </div>
+            </section>
+    
+            <footer>
+              <div class="container-1">
+                <div class="social-media">
+                  <br class="unstyled-space">
+                  <a href="index.html#home"><svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
+                    <use href="previewer/images/logo.svg#image" fill-rule="evenodd" fill="url(#gradient)">
+                      Logo image
+                    </use>
+                    <use href="previewer/images/logo.svg#text" fill="#FFFFFF">
+                      Logo text
+                    </use>
+                    
+                    <!-- alt -->
+                      Logo
+                  </svg></a>
+    
+                  <div>
+                    <a href="https://www.facebook.com/frontendmentor/"><img src="previewer/images/icon-facebook.svg" alt="Facebook icon"></a>
+                    <a href="https://www.youtube.com/"><img src="previewer/images/icon-youtube.svg" alt="Youtube icon"></a>
+                    <a href="https://twitter.com/frontendmentor"><img src="previewer/images/icon-twitter.svg" alt="Twitter icon"></a>
+                    <a href="https://www.pinterest.com/"><img src="previewer/images/icon-pinterest.svg" alt="Pinterest icon"></a>
+                    <a href="https://www.instagram.com/"><img src="previewer/images/icon-instagram.svg" alt="Instagram icon"></a>
+                  </div>
+                </div>
+    
+                <ul class="menu" style="margin-bottom:0">
+                  <li><a href="index.html#about">About Us</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="index.html#blog">Blog</a></li>
+                </ul>
+                <ul class="menu" style="margin-top:0">
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+    
+              <div class="container-2">
+                <button type="button" class="request">Request Invite</button>
+                <br class="unstyled-space">
+                <br class="unstyled-space">
+                <small>
+                  © Easybank. All Rights Reserved.
+                  <br>
+                  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Gabriel Bello Schwarzbold</a>.
+                </small>
+              </div>
+            </footer>
+          </main>
+        </div>
+      </body>
+</html>
