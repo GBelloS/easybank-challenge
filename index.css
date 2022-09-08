@@ -14,6 +14,8 @@ html:root
     --p-margin: 30px;
     --item-margin: 20px;
 
+    /* background-color: var(--Dark-Blue); */
+
     font: /*300*/400/*700*/ 18px 'Public Sans', sans-serif;
     color: var(--Dark-Blue);
 }
@@ -138,7 +140,7 @@ p
     padding-top: var(--p-margin);
     margin: 0;
 }
-main button.request{ margin-top: var(--p-margin); }
+main>.container-1 button.request{ margin-top: var(--p-margin); }
 
 /* ------------MAIN-SECTION-2------------ */
 main>.container-2,main>.container-3
@@ -248,5 +250,62 @@ main>.container-3 p.text
     
     padding-top: 10px;
 }
+/* ------------FOOTER------------ */
+footer
+{
+    background-color: var(--Dark-Blue);
 
-/* -------------------------------------- */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    box-sizing: border-box;
+    min-height: 190px;
+    padding: 47px var(--horizontal-margin);
+}
+footer>.container-1
+{
+    display: flex;
+    justify-content: space-between;
+}
+footer>.container-1>.social-media
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+footer>.container-1>.social-media>div
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer>.container-1>.social-media a{ margin-right: 11px; }
+
+footer>.container-1>.menu
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+footer li,small
+{
+    font-size: 14px;
+    font-weight: 300;
+
+    padding: 5px 0;
+}
+footer>.container-1>.menu a{ color: var(--White); }
+
+footer>.container-2
+{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: flex-end;
+}
+small{ color: var(--Grayish-Blue); }
+
+/* ------------------------------ */
