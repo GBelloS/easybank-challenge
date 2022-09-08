@@ -14,10 +14,15 @@ html:root
     --p-margin: 30px;
     --item-margin: 20px;
 
-    /* background-color: var(--Dark-Blue); */
-
     font: /*300*/400/*700*/ 18px 'Public Sans', sans-serif;
     color: var(--Dark-Blue);
+}
+body>.grid
+{
+    min-height: 100vh;
+    
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 a{ text-decoration: none; }
 
@@ -75,9 +80,16 @@ button.request
     border: none;
     border-radius: calc(var(--height)/2);
 }
-/* ------------MAIN-SECTION-1------------ */
-main{ overflow: hidden; }
+/* ------------MAIN------------ */
+main
+{
+    display: grid;
+    grid-template-rows: repeat(2,auto) 1fr auto;
+    grid-template-columns: 100%;
 
+    overflow: hidden;
+}
+/* ------------MAIN-SECTION-1------------ */
 main>.container-1
 {
     background-color: var(--Very-Light-Gray);
@@ -306,6 +318,8 @@ footer>.container-2
     justify-content: space-between;
     align-items: flex-end;
 }
-small{ color: var(--Grayish-Blue); }
+small{ text-align: right; }
+
+small, small a{ color: var(--Grayish-Blue); }
 
 /* ------------------------------ */
