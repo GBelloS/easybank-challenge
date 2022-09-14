@@ -82,6 +82,8 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 I will divide the HTML in containers and use flex/media queries to make it responsive.
 
+Possibly add some parallax effects...
+
 <!-- ### Useful resources
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
