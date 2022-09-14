@@ -86,7 +86,9 @@ button.request
 {
     background-image: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
     color: var(--White);
+    
     font-size: 14px;
+    cursor: pointer;
 
     --height: 44px;
     height: var(--height);
@@ -95,7 +97,7 @@ button.request
     border: none;
     border-radius: calc(var(--height)/2);
 }
-button.request
+button.request:hover{ filter: brightness(1.25) saturate(.5); }
 /* ------------MAIN------------ */
 main
 {
@@ -155,7 +157,7 @@ main>.container-1>.text
 
     margin: 169px 0;
 }
-h1,h2,h3
+h1,h2,h3,h4
 {
     font-size: 55px;
     font-weight: 400;
@@ -264,12 +266,14 @@ main>.container-3 article>div.text::before
 }
 main>.container-3 p.credit{ font-size: 11px; }
 
-main>.container-3 h3
+main>.container-3 h4
 {
     font-size: 17px;
     margin-top: 5px;
 }
 main>.container-3 a{ color: var(--Dark-Blue); }
+
+main>.container-3 a:hover{ color: var(--Lime-Green); }
 
 main>.container-3 p.text
 {
@@ -327,6 +331,8 @@ footer li,small
 }
 footer>.container-1>.menu a{ color: var(--White); }
 
+footer>.container-1>.menu a:hover{ color: var(--Lime-Green); }
+
 footer>.container-2
 {
     display: flex;
@@ -342,4 +348,5 @@ small
 }
 small a{ color: var(--Light-Grayish-Blue); }
 
+small a:hover{ color: var(--Lime-Green); }
 /* ------------------------------ */
