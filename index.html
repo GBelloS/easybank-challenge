@@ -56,7 +56,7 @@
       </header>
       
       <main>
-        <section class="container-1"><!--Should have a header!!!-->
+        <section class="container-1"> <!--Should have a header!!!-->
           <br class="unstyled-space">
           <div class="image">
             <div>
@@ -118,7 +118,7 @@
           <h2>Latest Articles</h2>
 
           <div>
-            <article><!--Any content that can be seen alone, like an "element" instead of a "section" of a text-->
+            <article> <!--Any content that can be seen alone, like an "element" instead of a "section" of a text-->
               <div class="image">
                 <img src="previewer/images/image-currency.jpg" height="150" alt="Photography of money cells">
               </div>
@@ -185,11 +185,31 @@
               </svg></a>
 
               <div>
-                <a href="https://www.facebook.com/frontendmentor/"><img src="previewer/images/icon-facebook.svg" alt="Facebook icon"></a>
-                <a href="https://www.youtube.com/"><img src="previewer/images/icon-youtube.svg" alt="Youtube icon"></a>
-                <a href="https://twitter.com/frontendmentor"><img src="previewer/images/icon-twitter.svg" alt="Twitter icon"></a>
-                <a href="https://www.pinterest.com/"><img src="previewer/images/icon-pinterest.svg" alt="Pinterest icon"></a>
-                <a href="https://www.instagram.com/"><img src="previewer/images/icon-instagram.svg" alt="Instagram icon"></a>
+                <a href="https://www.facebook.com/frontendmentor/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <use href="previewer/images/icon-facebook.svg#content">
+                    Facebook icon
+                  </use>
+                </svg></a>
+                <a href="https://www.youtube.com/"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+                  <use href="previewer/images/icon-youtube.svg#content">
+                    Youtube icon
+                  </use>
+                </svg></a>
+                <a href="https://twitter.com/frontendmentor"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
+                  <use href="previewer/images/icon-twitter.svg#content">
+                    Twitter icon
+                  </use>
+                </svg></a>
+                <a href="https://www.pinterest.com/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <use href="previewer/images/icon-pinterest.svg#content">
+                    Pinterest icon
+                  </use>
+                </svg></a>
+                <a href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+                  <use href="previewer/images/icon-instagram.svg#content">
+                    Instagram icon
+                  </use>
+                </svg></a>
               </div>
             </div>
 
@@ -220,3 +240,14 @@
     </div>
   </body>
 </html>
+<!--
+  svg path regexp reference:
+    ([mlhvcsqtaz])([0-9.\-"]+)
+    \n$1 $2
+
+    ([^ ])([-][.0-9]+)
+    $1 $2
+
+    ([^0-9])([.][0-9]+)
+    $10$2
+-->

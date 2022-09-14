@@ -315,6 +315,10 @@ footer>.container-1>.social-media>div
 }
 footer>.container-1>.social-media a{ margin-right: 11px; }
 
+footer>.container-1>.social-media>div use{ fill: var(--White); }
+
+footer>.container-1>.social-media>div a:hover use{ fill: var(--Lime-Green); }
+
 footer>.container-1>.menu
 {
     display: flex;
