@@ -65,7 +65,7 @@ header li
     padding: 33px 0;
     margin: 0 15px;
 }
-header li:hover::before
+header li a:hover::before
 {content: '';
     position: absolute;
         top: 100%;
@@ -80,7 +80,7 @@ header li:hover::before
 }
 header li a{ color: var(--Grayish-Blue); }
 
-header li:hover a{ color: var(--Dark-Blue); }
+header li a:hover{ color: var(--Dark-Blue); }
 
 button.request
 {
@@ -353,4 +353,48 @@ small
 small a{ color: var(--Light-Grayish-Blue); }
 
 small a:hover{ color: var(--Lime-Green); }
-/* ------------------------------ */
+/* ------------MEDIA-QUERIES------------ */
+@media (max-width: 1120px)
+{
+    main>.container-1
+    {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    main>.container-1>.image
+    {
+        width: auto;
+        padding-top: min(400px,86.7%);
+
+        background-image: url('previewer/images/bg-intro-mobile.svg');
+        background-position: center bottom 22.5%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        margin: 0;
+    }
+    main>.container-1>.image>div
+    {
+        position: absolute;
+            bottom: 0;
+        justify-content: space-around;
+    }
+    main>.container-1 span
+    {
+        display: none;
+    }
+    main>.container-1 img
+    {
+        position: static;
+        width: min(100%,767px);
+        margin: 0;
+    }
+    main>.container-1>.text
+    {
+        align-self: flex-start;
+        
+        margin-top: 0;
+        margin-left: var(--horizontal-margin);
+    }
+}
+/* ------------------------------------- */
