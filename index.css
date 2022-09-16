@@ -40,20 +40,20 @@ header
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 var(--horizontal-margin);
+    padding: 0px var(--horizontal-margin);
 }
 header svg
 {
     width: 139px;
     height: 20px;
     
-    transform: matrix(1,0,0,1,0,0);
+    transform: none;
 }
 ul
 {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 
     display: flex;
 }
@@ -62,8 +62,8 @@ header li
     position: relative;
     font-size: 14px;
     
-    padding: 33px 0;
-    margin: 0 15px;
+    padding: 33px 0px;
+    margin: 0px 15px;
 }
 header li a:hover::before
 {content: '';
@@ -76,7 +76,7 @@ header li a:hover::before
     height: var(--height);
     
     background-image: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
-    border-radius: calc(var(--height)/2) calc(var(--height)/2) 0 0;
+    border-radius: calc(var(--height)/2) calc(var(--height)/2) 0px 0px;
 }
 header li a{ color: var(--Grayish-Blue); }
 
@@ -127,7 +127,7 @@ main>.container-1>.image
     align-self: stretch;
     
     background-image: url('previewer/images/bg-intro-desktop.svg');
-    background-position: left top -260px;
+    background-position-y: -260px;
     background-repeat: no-repeat;
     
     margin-left: 20px;
@@ -147,28 +147,28 @@ main>.container-1 img
     width: 767px;
     height: auto;
     
-    margin-left: 175px;
-    margin-right: calc(var(--horizontal-margin) - 19px);
+    padding-left: 175px;
+    padding-right: calc(var(--horizontal-margin) - 2.48%);
 }
 main>.container-1>.text
 {
     width: 450px;
     flex-shrink: 0;
 
-    margin: 169px 0;
+    margin: 169px 0px;
 }
 h1,h2,h3,h4
 {
     font-size: 55px;
     font-weight: 400;
 
-    margin: 0;
+    margin: 0px;
 }
 p
 {
     line-height: 27px;
     padding-top: var(--p-margin);
-    margin: 0;
+    margin: 0px;
 }
 main>.container-1 button.request{ margin-top: var(--p-margin); }
 
@@ -190,14 +190,14 @@ main>.container-2>ul
     flex-wrap: wrap;
     justify-content: space-between;
     
-    margin: 25px calc(-1*var(--item-margin)/2) 0;
+    margin: 25px calc(-1*var(--item-margin)/2) 0px;
 }
 main>.container-2>ul>li
 {
     width: 265px;
     flex-shrink: 0;
    
-    margin: 50px calc(var(--item-margin)/2) 0;
+    margin: 50px calc(var(--item-margin)/2) 0px;
 }
 main>.container-2 h3
 {
@@ -216,7 +216,7 @@ main>.container-3>div
     flex-wrap: wrap;
     justify-content: space-between;
 
-    margin: 0 calc(-1*var(--item-margin)/2);
+    margin: 0px calc(-1*var(--item-margin)/2);
 }
 main>.container-3 article
 {
@@ -225,14 +225,14 @@ main>.container-3 article
     flex-shrink: 0;
    
     --border-radius: 6px;
-    margin: 50px calc(var(--item-margin)/2) 0;
+    margin: 50px calc(var(--item-margin)/2) 0px;
 }
 main>.container-3 article>div.image
 {
     --image-height: 200px;
     height: var(--image-height);
  
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
     overflow: hidden;
 }
 main>.container-3 img
@@ -249,7 +249,7 @@ main>.container-3 article>div.text
         z-index: 0;
     
     --text-margin: 20px;
-    margin: 0 var(--text-margin);
+    margin: 0px var(--text-margin);
 }
 
 main>.container-3 article>div.text::before
@@ -262,7 +262,7 @@ main>.container-3 article>div.text::before
     height: calc(100% + var(--p-margin));
 
     background-color: var(--White);
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    border-radius: 0px 0px var(--border-radius) var(--border-radius);
 }
 main>.container-3 p.credit{ font-size: 11px; }
 
@@ -332,7 +332,7 @@ footer li,small
     font-size: 14px;
     font-weight: 300;
 
-    padding: 5px 0;
+    padding: 5px 0px;
 }
 footer>.container-1>.menu a{ color: var(--White); }
 
@@ -359,7 +359,7 @@ small a:hover{ color: var(--Lime-Green); }
 {
     main>.container-1>.image
     {
-        background-position: left top 67.9%;
+        background-position-y: 67.9%;
         background-size: 156.6%
     }
     main>.container-1>.image>div
@@ -367,27 +367,47 @@ small a:hover{ color: var(--Lime-Green); }
         width: 94.5%;
         height: 100%;
     }
+    main>.container-1 span{ display: none; }
+
     main>.container-1 img
     {
         position: absolute;
-            top: 349.5px;
+            top: 53.69%;
         transform: translateY(-50%);
 
         width: 100%;
-        margin-left: 22.8%;
+        padding-left: 22.8%;
     }
 }
 @media (max-width: 960px)
 {
+    header button.request{ display: none; }
+
+    main>.container-1>.text{ margin: calc(100vw*6.9/16 - 245px) 0px; }
+
+    footer
+    {
+        display: block;
+    }
+    footer>.container-2
+    {
+        flex-direction: row;
+        align-items: center;
+        
+        padding-top: var(--footer-padding)
+    }
+}
+@media (max-width: 720px)
+{
     /* ------------HEADER------------ */
-    /* header
+    header
     {
         height: 64px;
     }
     header>nav
     {
         position: absolute;
-            left: 0;
+            left: 0px;
             top: 100%;
             z-index: 1;
         background-image: linear-gradient(to bottom,var(--Dark-Blue),transparent);
@@ -410,22 +430,35 @@ small a:hover{ color: var(--Lime-Green); }
     header li
     {
         font-size: 18px;
-    } */
-    header button.request
-    {
-        display: none;
     }
-    /* ------------FOOTER------------ */
-    footer
+    /* ------------MAIN------------ */
+    main>.container-1
     {
-        display: block;
+        flex-direction: column-reverse;
     }
-    footer>.container-2
+    main>.container-1>.image
     {
-        flex-direction: row;
-        align-items: center;
+        width: 100%;
+        padding-top: calc((100% - var(--horizontal-margin))*.89);
         
-        padding-top: var(--footer-padding)
+        margin: 0px;
     }
+    main>.container-1>.image>div
+    {
+        position: static;
+        width: 100%;
+    }
+    main>.container-1 img
+    {
+        top: 100%;
+        transform: translateY(-100%);
+
+        box-sizing: border-box;
+        padding-left: 0px;
+    }
+    main>.container-1>.text{ margin: 0px; }
+
+    /* ------------FOOTER------------ */
+    
 }
 /* ------------------------------------- */
