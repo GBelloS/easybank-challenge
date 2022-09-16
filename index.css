@@ -385,10 +385,8 @@ small a:hover{ color: var(--Lime-Green); }
 
     main>.container-1>.text{ margin: calc(100vw*6.9/16 - 245px) 0px; }
 
-    footer
-    {
-        display: block;
-    }
+    footer{ display: block; }
+
     footer>.container-2
     {
         flex-direction: row;
@@ -399,11 +397,15 @@ small a:hover{ color: var(--Lime-Green); }
 }
 @media (max-width: 720px)
 {
-    /* ------------HEADER------------ */
-    header
+    html:root
     {
-        height: 64px;
+        --p-margin: min(5vw,30px);
+        font-size: min(4.5vw,18px);
+        font-weight: 300;
     }
+    /* ------------HEADER------------ */
+    header{ height: 64px; }
+
     header>nav
     {
         position: absolute;
@@ -427,19 +429,23 @@ small a:hover{ color: var(--Lime-Green); }
         margin: var(--horizontal-margin);
         border-radius: 5px;
     }
-    header li
-    {
-        font-size: 18px;
-    }
+    header li{ font-size: 18px; }
+
     /* ------------MAIN------------ */
     main>.container-1
     {
         flex-direction: column-reverse;
+        padding-left: 0px;
     }
     main>.container-1>.image
     {
         width: 100%;
-        padding-top: calc((100% - var(--horizontal-margin))*.89);
+        padding-top: calc((100% - 2*var(--horizontal-margin))*.92);
+
+        background-image: url('previewer/images/bg-intro-mobile.svg');
+        background-position-y: 122.5%;
+        background-repeat: no-repeat;
+        background-size: 100%;
         
         margin: 0px;
     }
@@ -454,10 +460,23 @@ small a:hover{ color: var(--Lime-Green); }
         transform: translateY(-100%);
 
         box-sizing: border-box;
-        padding-left: 0px;
+        padding-left: calc(var(--horizontal-margin) - 2.48%);
     }
-    main>.container-1>.text{ margin: 0px; }
-
+    main>.container-1>.text
+    {
+        width: auto;
+        text-align: center;
+        margin: min(7vw,169px) var(--horizontal-margin) min(30vw,169px);
+    }
+    h1
+    {
+        font-size: min(9.5vw,55px);
+        font-weight: 300;
+    }
+    p
+    {
+        line-height: min(6.5vw,27px);
+    }
     /* ------------FOOTER------------ */
     
 }
