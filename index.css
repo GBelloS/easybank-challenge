@@ -33,6 +33,7 @@ p{ color: var(--Grayish-Blue); }
 /* ------------HEADER------------ */
 header
 {
+    position: relative;
     background-color: var(--White);
 
     display: flex;
@@ -40,7 +41,6 @@ header
     align-items: center;
 
     padding: 0 var(--horizontal-margin);
-    overflow: hidden;
 }
 header svg
 {
@@ -135,13 +135,14 @@ main>.container-1>.image
 main>.container-1>.image>div
 {
     position: absolute;
+    width: 100%;
 
     display: flex;
     justify-content: space-between;
 }
 main>.container-1 img
 {
-    position: absolute;
+    position: relative;
         top: -120px;
     width: 767px;
     height: auto;
@@ -292,7 +293,8 @@ footer
 
     box-sizing: border-box;
     min-height: 190px;
-    padding: 47px var(--horizontal-margin);
+    --footer-padding: 47px;
+    padding: var(--footer-padding) var(--horizontal-margin);
 }
 footer>.container-1
 {
@@ -355,11 +357,6 @@ small a:hover{ color: var(--Lime-Green); }
 /* ------------MEDIA-QUERIES------------ */
 @media (max-width: 1440px)
 {
-    main>.container-1
-    {
-        /* display: grid;
-        grid-template-columns: 450px 1fr;
-    */}
     main>.container-1>.image
     {
         background-position: left top 67.9%;
@@ -372,7 +369,8 @@ small a:hover{ color: var(--Lime-Green); }
     }
     main>.container-1 img
     {
-        top: 349.5px;
+        position: absolute;
+            top: 349.5px;
         transform: translateY(-50%);
 
         width: 100%;
@@ -381,6 +379,53 @@ small a:hover{ color: var(--Lime-Green); }
 }
 @media (max-width: 960px)
 {
-    
+    /* ------------HEADER------------ */
+    /* header
+    {
+        height: 64px;
+    }
+    header>nav
+    {
+        position: absolute;
+            left: 0;
+            top: 100%;
+            z-index: 1;
+        background-image: linear-gradient(to bottom,var(--Dark-Blue),transparent);
+
+        width: 100%;
+        height: calc(100vh - 100%);
+
+        visibility: hidden;
+    }
+    header ul
+    {
+        background-color: var(--White);
+
+        flex-direction: column;
+        align-items: center;
+        
+        margin: var(--horizontal-margin);
+        border-radius: 5px;
+    }
+    header li
+    {
+        font-size: 18px;
+    } */
+    header button.request
+    {
+        display: none;
+    }
+    /* ------------FOOTER------------ */
+    footer
+    {
+        display: block;
+    }
+    footer>.container-2
+    {
+        flex-direction: row;
+        align-items: center;
+        
+        padding-top: var(--footer-padding)
+    }
 }
 /* ------------------------------------- */
