@@ -26,6 +26,8 @@ body>.grid
 }
 a{ text-decoration: none; }
 
+button.menu{ display: none; }
+
 p{ color: var(--Grayish-Blue); }
 
 .unstyled-space{ display: none; }
@@ -320,7 +322,7 @@ footer>.container-1>.social-media>div use{ fill: var(--White); }
 
 footer>.container-1>.social-media>div a:hover use{ fill: var(--Lime-Green); }
 
-footer>.container-1>.menu
+footer>.container-1>ul.menu
 {
     display: flex;
     flex-direction: column;
@@ -334,9 +336,9 @@ footer li,small
 
     margin: 5px 0px;
 }
-footer>.container-1>.menu a{ color: var(--White); }
+footer>.container-1>ul.menu a{ color: var(--White); }
 
-footer>.container-1>.menu a:hover{ color: var(--Lime-Green); }
+footer>.container-1>ul.menu a:hover{ color: var(--Lime-Green); }
 
 footer>.container-2
 {
@@ -421,6 +423,8 @@ small a:hover{ color: var(--Lime-Green); }
 
         visibility: hidden;
     }
+    header>nav.visible{ visibility: visible; }
+
     header ul
     {
         background-color: var(--White);
@@ -433,6 +437,23 @@ small a:hover{ color: var(--Lime-Green); }
     }
     header li{ font-size: 18px; }
 
+    button.menu
+    {
+        display: block;
+        width: 24px;
+        height: 19px;
+
+        background-color: transparent;
+        background-image: url('previewer/images/icon-hamburger.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+
+        border: none;
+    }
+    button.menu:hover{ cursor: pointer; }
+    
+    button.close{ background-image: url('previewer/images/icon-close.svg'); }
+    
     /* ------------MAIN-SECTION-1------------ */
     main>.container-1
     {
@@ -559,7 +580,7 @@ small a:hover{ color: var(--Lime-Green); }
     
     footer>.container-1>.social-media>div a{ margin: 0px var(--item-margin); }
 
-    footer>.container-1>.menu
+    footer>.container-1>ul.menu
     {
         align-items: center;
         margin: calc(-1*var(--item-margin)) 0px;
