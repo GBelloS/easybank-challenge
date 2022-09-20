@@ -1,5 +1,6 @@
 const header = document.querySelector('header')
 const menu = header.querySelector('nav')
+const main = document.querySelector('main')
 
 const menuButton = header.appendChild(document.createElement('button'))
 menuButton.type = 'button'
@@ -22,6 +23,15 @@ menu.addEventListener
             ( event.target.nodeName == 'A' ||
               event.target == event.currentTarget )
         ) toggleMenu()
+    }
+)
+main.addEventListener
+(
+    'click',
+    event=>
+    {
+        if(event.target != menu.querySelector('ul') && menu.classList.contains('visible'))
+            toggleMenu()
     }
 )
 window.addEventListener
