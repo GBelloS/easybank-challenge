@@ -35,12 +35,11 @@ Add a screenshot of your solution. The easiest way to do this is to use Firefox 
 Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
 
 Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
+-->
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
- -->
+- Solution URL: [Easybank ChalLenge](https://gbellos.github.io/easybank-challenge/)
+ 
 ## My process
 
 ### Built with
@@ -48,9 +47,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - [VS Code](https://code.visualstudio.com/)
 - Semantic HTML5 markup
 - CSS custom properties
-<!-- - Flexbox
+- Flexbox
 - CSS Grid
-- Mobile-first workflow
+<!-- - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles -->
@@ -77,12 +76,10 @@ const proudOfThisFunc = () => {
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
  -->
-<!-- ### Continued development -->
-### Next steps
+### Continued development
+<!-- ### Next steps -->
 
-I will divide the HTML in containers and use flex/media queries to make it responsive.
-
-Possibly add some parallax effects...
+Possibly add some parallax effects in the future.
 
 <!-- ### Useful resources
 
