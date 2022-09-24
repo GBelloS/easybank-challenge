@@ -1,3 +1,4 @@
+/* ---------------------------MENU--------------------------- */
 const header = document.querySelector('header')
 const menu = header.querySelector('nav')
 const logo = header.firstElementChild
@@ -44,3 +45,7 @@ window.addEventListener
             toggleMenu()
     }
 )
+/* ---------------------------BUTTONS--------------------------- */
+document
+    .querySelectorAll('button.request')
+    .forEach(element=>element.addEventListener('click',()=>open('soon.html')))
