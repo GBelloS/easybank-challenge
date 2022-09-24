@@ -410,6 +410,12 @@ small a:hover{ color: var(--Lime-Green); }
     /* ------------HEADER------------ */
     header{ height: 64px; }
 
+    header.sticky
+    {
+        position: sticky;
+            top: 0px;
+            z-index: 1;
+    }
     header>nav
     {
         position: absolute;

@@ -1,6 +1,6 @@
 const header = document.querySelector('header')
 const menu = header.querySelector('nav')
-const main = document.querySelector('main')
+const logo = header.firstElementChild
 
 const menuButton = header.appendChild(document.createElement('button'))
 menuButton.type = 'button'
@@ -8,6 +8,7 @@ menuButton.classList.add('menu', 'hamburguer')
 
 function toggleMenu()
 {
+    header.classList.toggle('sticky')
     menu.classList.toggle('visible')
     menuButton.classList.toggle('close')
 }
@@ -25,12 +26,12 @@ menu.addEventListener
         ) toggleMenu()
     }
 )
-main.addEventListener
+logo.addEventListener
 (
     'click',
     event=>
     {
-        if(event.target != menu.querySelector('ul') && menu.classList.contains('visible'))
+        if(innerWidth<=720 && menu.classList.contains('visible'))
             toggleMenu()
     }
 )
