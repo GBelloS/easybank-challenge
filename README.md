@@ -53,14 +53,14 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles -->
-<!-- 
+
 ### What I learned
 
 My biggest learning was about using flex. Without javascript, the best way to use it to make a dynamic responsiveness was to use more divs in the HTML code.
 
 Example:
 
-![Example](previewer/images/example.webp) -->
+![Example](previewer/images/example.webp)
 <!-- 
 ```html
 <h1>Some HTML code I'm proud of</h1>
