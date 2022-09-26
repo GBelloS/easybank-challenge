@@ -60,7 +60,7 @@ My biggest learning was about using flex. Without javascript, the best way to us
 
 Example:
 
-![Example](previewer/images/example.webp)
+![Example Picture](previewer/images/example.webp)
 <!-- 
 ```html
 <h1>Some HTML code I'm proud of</h1>
