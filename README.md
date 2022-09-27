@@ -1,12 +1,14 @@
 # Frontend Mentor - Easybank landing page solution
 
-This is my ongoing solution to the [Easybank landing page](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN) challenge on [Frontend Mentor](https://www.frontendmentor.io/).
+This is my solution to the [Easybank landing page](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN) challenge on [Frontend Mentor](https://www.frontendmentor.io/).
 
-<!-- ## Table of contents
+![Design preview for the Easybank landing page coding challenge](./design/desktop-preview.jpg)
+
+## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  <!-- - [Screenshot](#screenshot) -->
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -14,8 +16,8 @@ This is my ongoing solution to the [Easybank landing page](https://www.frontendm
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
- -->
+<!-- - [Acknowledgments](#acknowledgments) -->
+
 ## Overview
 
 ### The challenge
@@ -56,40 +58,76 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-My biggest learning was about using flex. Without javascript, the best way to use it to make a dynamic responsiveness was to use more divs in the HTML code.
+My biggest learning was about the usage of flex. Without using javascript, I found that the best way to make a dynamic responsiveness with flex was using more divs and spans in the HTML code.
 
-Example:
+For example, I used a span tag together with the img tag in an extra flex div container (div.container) to force the image to the right when the size of the div.container is the default size (--fixed-size-1).
 
-![Example Picture](previewer/images/example.webp)
-<!-- 
+When we reduce the size of the viewport and the div.container shrinks, the space between the span and the img tag gets smaller until it reaches 0. After that, as the width of div.container gets smaller than the image width, the image is now fixed to the left side and the width leftovers are just moved out of the section container (section.container). That's a mechanic that only flex could make so simple.
+
+![Example picture](previewer/images/example.webp)
+
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<section class="container">
+  <div class="image">
+    <div class="container">
+      <span></span>
+      <img src="...">
+    </div>
+  </div>
+
+  <div class="text">
+    ...
+  </div>
+</section>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+section.container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+.image
+{
+    order: 1;
+    position: relative;
+
+    width: var(--fixed-size-1);
+    align-self: stretch;
+    
+    margin-left: 20px;
+}
+div.container
+{
+    position: absolute;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+div.container>img
+{
+    width: 767px;
+    height: auto;
+    
+    padding-left: 175px;
+    padding-right: var(--fixed-size-2);
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more. -->
+We can note that combined with it, the section.container is also flexed and there is space around the .image and the .text containers that gets smaller when the viewport is reduced. My goal with it all was to make the background of the cellphones picture centered with it when the viewport is big, but sticked to the left (as in the [proposed design](design/desktop-design.jpg)) when it is small, with a nice dynamic responsiveness.
+
+Obs.: The reason why I use another div (the div.container) to flex the image with the span tag and not the .image is that the image should be absolute positioned so the height of the section.container wasn't influenced by its size and its vertical leftovers were in front of the section below (the one with the "Why choose Easybank?" header).
 
 ### Continued development
 <!-- ### Next steps -->
 
 Possibly add some parallax effects in the future.
 
-<!-- ### Useful resources
+### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Previewer app](previewer/previewer.html) - I made this app to help me visualize all the svg files.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
- -->
 ## Author
 
 <!-- - Website - [Add your name here](https://www.your-site.com) -->
