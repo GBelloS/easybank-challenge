@@ -122,7 +122,8 @@ Obs.: The reason why I use another div (the div.container) to flex the image wit
 ### Continued development
 <!-- ### Next steps -->
 
-Possibly add some parallax effects in the future.
+- Possibly add some parallax effects in the future.
+- Add aria-hidden="true" in the elements that doesn,t need to be read by accessibility APIs.
 
 ### Useful resources
 
