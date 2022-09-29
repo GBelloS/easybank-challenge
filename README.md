@@ -48,7 +48,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - [VS Code](https://code.visualstudio.com/)
 - Semantic HTML5 markup
-- CSS custom properties
+- [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 - [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
 - [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
 <!-- - Mobile-first workflow
@@ -60,7 +60,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 My biggest learning was about the usage of flex. Without using javascript, I found that the best way to make a dynamic responsiveness with flex was using more divs and spans in the HTML code.
 
-For example, I used a span tag together with the img tag in an extra flex div container (div.container) to force the image to the right when the size of the div.container is the default size (--fixed-size-1).
+For example, in the animation below, where I reduce the size of the viewport, I used a span tag together with the cellphone picture in an extra flex div container (div.container) to force the image to the right when the size of the div.container is the default size (--fixed-size-1).
 
 When we reduce the size of the viewport and the div.container shrinks, the space between the span and the img tag gets smaller until it reaches 0. After that, as the width of div.container gets smaller than the image width, the image is now fixed to the left side and the width leftovers are just moved out of the section container (section.container). That's a mechanic that only flex could make so simple.
 
@@ -117,7 +117,7 @@ div.container>img
 
 We can note that combined with it, the section.container is also flexed and there is space around the .image and the .text containers that gets smaller when the viewport is reduced. My goal with it all was to make the background of the cellphones picture centered with it when the viewport is big, but sticked to the left (as in the [proposed design](design/desktop-design.jpg)) when it is small, with a nice dynamic responsiveness.
 
-Obs.: The reason why I use another div (the div.container) to flex the image with the span tag and not the .image is that the image should be absolute positioned so the height of the section.container wasn't influenced by its size and its vertical leftovers were in front of the section below (the one with the "Why choose Easybank?" header).
+Obs.: The reason why I used another div (the div.container) to flex the image with the span tag and not the .image was that the image should be absolute positioned so the height of the section.container wasn't influenced by its size and its vertical leftovers were in front of the section below (the one with the "Why choose Easybank?" header).
 
 ### Continued development
 <!-- ### Next steps -->
@@ -132,8 +132,11 @@ Obs.: The reason why I use another div (the div.container) to flex the image wit
 ## Author
 
 <!-- - Website - [Add your name here](https://www.your-site.com) -->
-- Frontend Mentor - [@gbellos](https://www.frontendmentor.io/profile/GBelloS)
+- E-mail - gabriel.b.schwarzbold@gmail.com
+- Linkedin - [@GBelloS](linkedin.com/in/gbellos/en)
 - Twitter - [@gbeiios](https://www.twitter.com/GBeIIoS)
+- Frontend Mentor - [@GBelloS](https://www.frontendmentor.io/profile/GBelloS)
+- ⌨️ Discord: GBelloS#2061
 
 <!-- ## Acknowledgments
 
