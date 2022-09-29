@@ -49,8 +49,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - [VS Code](https://code.visualstudio.com/)
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- CSS Grid
+- [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
 <!-- - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
