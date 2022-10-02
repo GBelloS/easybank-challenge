@@ -127,7 +127,7 @@ Obs.: The reason why I used another div (the div.container) to flex the image wi
 
 ### Useful resources
 
-- [Previewer app](previewer/previewer.html) - I made this app to help me visualize all the svg files.
+- [Previewer app](https://gbellos.github.io/easybank-challenge/previewer/previewer.html) - I made this app to help me visualize all the svg files.
 
 ## Author
 
